@@ -56,3 +56,6 @@ Appendix A. Sample Data
 Appendix B. JSON-schema Validation
 
 
+
+(C)
+Non-fungible tokens, or NFTs, have been growing in popularity with the rise of blockchain technology. They allow holders of digital art, collectibles and all manner of other items to track ownership.
