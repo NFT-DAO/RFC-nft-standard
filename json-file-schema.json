@@ -61,7 +61,7 @@
 	"Files": {
 		"type": "array",
       	"description": "A non-empty list of files for the NFT token.",
-		"items": "items": { "$ref": "#/$defs/files" }
+		"items": { "$ref": "#/$defs/files" }
 	}
   },
 
@@ -92,4 +92,5 @@
 			}
 	  }
 	}
+  }
 }

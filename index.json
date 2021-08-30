@@ -1,20 +1,18 @@
 {
 	"Name": "NFT 0",
-	"FilesHash": "sha256-hash-of-concatenated-file-Hash",
+	"FileHash": "sha256-hash-of-concatenated-file-Hash",
 	"Title": "The Title of this NFT",
 	"Description": "What is this NFT",
 	"Creator": "John Q Person",
 	"CreationTimestamp": "TODO",
 	"License": "CC-BY-SA-4.0",
-	"Location": {
-		{ "latitude": 42.43,, "longitude": -109.31 }
-	},
+	"Location": { "latitude": 42.43, "longitude": -109.31 } ,
 	"RepFile": 0,
 	"AdditionalData": "{\"some\":\"data\"}",
 	"Files": [
 		{
 			"MimeType": "TODO",
-			"OrigialFileName": "TODO",
+			"OriginalFileName": "TODO",
 			"FileDescription": "TODO",
 			"FileName": "TODO",
 			"Hash": "sha256-hash-of-file"
