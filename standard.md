@@ -168,7 +168,7 @@ The file contains a JSON file, `index.json`.
         "Title": "The Title of this NFT",
         "Description": "What is this NFT",
         "Creator": "John Q Person",
-        "CreationTimestamp": "TODO",
+        "CreationTimestamp": "2010-12-31T15:59:00-07:00",
         "License": "CC-BY-SA-4.0",
         "Location": {
             { "latitude": 42.43,, "longitude": -109.31 }
@@ -177,10 +177,10 @@ The file contains a JSON file, `index.json`.
         "AdditionalData": "{\"some\":\"data\"}",
         "Files": [
             {
-                "MimeType": "TODO",
-                "OrigialFileName": "TODO",
-                "FileDescription": "TODO",
-                "FileName": "TODO",
+                "MimeType": "mime type from rfc6838",
+                "OrigialFileName": "an-original-file-name.mp3",
+                "FileDescription": "Description of this file in set",
+                "FileName": "file-in-set.mp3" ,
                 "Hash": "sha256-hash-of-file"
             }
         ]
@@ -238,7 +238,7 @@ To keep NFT metadata compatible with changes coming up in the future, we use the
 - ERC-1155 Standard: https://eips.ethereum.org/EIPS/eip-1155
 - CBOR data Standard: https://datatracker.ietf.org/doc/html/rfc8610
 - JSON Schema: https://json-schema.org/draft/2020-12/schema
-
+- Timestamp Format: https://datatracker.ietf.org/doc/html/rfc3339
 
 ## Appendix
 
