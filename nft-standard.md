@@ -59,3 +59,40 @@ Appendix B. JSON-schema Validation
 
 (C)
 Non-fungible tokens, or NFTs, have been growing in popularity with the rise of blockchain technology. They allow holders of digital art, collectibles and all manner of other items to track ownership.
+
+
+From: https://developers.cardano.org/docs/native-tokens/minting-nfts/
+{
+  "721": {
+    "{policy_id}": {
+      "{policy_name}": {
+        "name": "<required>",
+        "description": "<optional>",
+        "sha256": "<required>",
+        "type": "<required>",
+        "image": "<required>",
+        "location": {
+          "ipfs": "<required>",
+          "https": "<optional>",
+          "arweave": "<optional>"
+        }
+      }
+    }
+  }
+}
+
+
+https://developers.cardano.org/docs/native-tokens/minting-nfts/
+
+
+From: https://cardano-ledger.readthedocs.io/en/latest/explanations/faq.html
+
+"Users will be able to upload names for their tokens, along with
+any other metadata pertaining to the specific tokens, to a metadata
+server. There might be more than one metadata server operational
+at a time (including one run by Cardano), so users will have to
+choose which server(s) to upload their metadata to, or to download
+their metadata from."
+
+CBOR : rfc 8949 - current standard for it.
+	go : https://github.com/fxamacker/cbor.git

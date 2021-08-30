@@ -1,0 +1,54 @@
+1. On Chain Data
+2. In File Data
+	- index.json
+	- hash_1.xxx
+	- hash_2.xxx
+	- hash_3.xxx
+	- hash_4.xxx
+
+	- index.json
+		{
+			"Name": "NFT 0",
+			"Title": "",
+			"Description": "",
+			"Creator": "",
+			"CreationTimestamp": "",
+			"Location": { "lat":x.xx, "lon":y.yy },
+			"RepFile": 0,
+			"AdditionalData": {
+				"name": "value",
+				"name1": "value1"
+			},
+			"Files": [
+				{
+					"MimeType":
+					"OrigialFileName":
+					"FileDescription":
+					"FileName":
+					"Hash": "sha256-hash-of-file"
+				}
+			]
+		}
+
+
+erc 1155 standard: https://eips.ethereum.org/EIPS/eip-1155
+
+
+{
+  "1155": {
+    "cbc34df5cb851e6fe5035a438d534ffffc87af012f3ff2d4db94288b": {
+      "nft0": {
+        "name": "NFT 0",
+        "uri": "https://ipfs.io/ipfs/QmUrNv5yofTVJcCZS0Wa7YBd4ppzvpLDx9a6iVwp3Tp29b/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip",
+        "hash": "d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597" 
+      },
+      "nft1": {
+        "name": "NFT 1",
+        "uri": "http://nft-metadata-storeage.s3.amazonaws.com/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip",
+        "hash": "d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597" 
+      }
+      ...
+    }
+  }
+}
+

@@ -1,0 +1,91 @@
+{
+  "$id": "https://example.com/cip25nftstandardfiledata.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CIP-25 NFT Standard File Data",
+  "required": [ "Name", "FileHash", "Title", "Description", "RepFile", "Files" ],
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "The uqique name of this NFT."
+    },
+    "FileHash": {
+      "type": "string",
+      "description": "The sha256 hash of the concatenated hashes of files in the Files array."
+    },
+    "Title": {
+      "type": "string",
+      "description": "The title of this NFT."
+    },
+    "Description": {
+      "type": "string",
+      "description": "A description of what this NFT is."
+    },
+    "Creator": {
+      "type": "string",
+      "description": "A name or set of names of who created this digital asset."
+    },
+    "CreationTimestamp": {
+      "type": "string",
+      "description": "A timestamp in RFC3339 format for when this asset was created."
+    },
+    "AdditionalData": {
+      "type": "string",
+      "description": "A set of user specified data for this token."
+    },
+	"Location": {
+		"required": [ "latitude", "longitude" ],
+		"type": "object",
+	  	"properties": {
+    		"latitude": {
+      		"type": "number",
+      		"minimum": -90,
+      		"maximum": 90
+    	},
+    	"longitude": {
+      		"type": "number",
+      		"minimum": -180,
+      		"maximum": 180
+    	}
+	  }
+	},
+    "RepFile": {
+      "description": "The position in the Files array of a representative image for this NFT",
+      "type": "integer",
+      "minimum": 0
+    },
+	"Files": {
+		"type": "array",
+      	"description": "A non-empty list of files for the NFT token.",
+		"items": "items": { "$ref": "#/$defs/files" }
+	}
+  },
+
+  "$defs": {
+    "files": {
+      "type": "object",
+      "required": [ "MimeType", "OriginalFileName", "FileDescription", "FileName", "Hash" ],
+      "properties": {
+			"MimeType": {
+			  "type": "string",
+			  "description": "The mime type of the file in the set."
+			},
+			"OriginalFileName": {
+			  "type": "string",
+			  "description": "The name that the file was originally stored as - before placement in thie set."
+			},
+			"FileDescription": {
+			  "type": "string",
+			  "description": "A description for this file."
+			},
+			"FileName": {
+			  "type": "string",
+			  "description": "The name of this file in the set."
+			},
+			"Hash": {
+			  "type": "string",
+			  "description": "The sha256 hash of the file's data in the set."
+			}
+	  }
+	}
+}
