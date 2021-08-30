@@ -85,10 +85,7 @@ the music and the sheet music as a `.pdf`.
 
 ## Specification
 
-This is the registered transaction_metadatum_label value
-
-transactionmetadatumlabel	description
-721	NFT or 1155 NFT Metadata
+721    NFT or 1155 NFT Metadata included in this transaction.
 
 ## On Chain Structure
 
@@ -97,19 +94,19 @@ This data must comply with the CBOR data representation used in Cardano.
 
 ```
     "metadata": {
-		"1155": {
-			"Policy_ID": {
-				"nft0": {
-					"name": "NFT 0",
-					"payload": "URI-of-file",
-					"hash": "sha256-hash-of-file"
-				},
-				...
-			},
-			...
-			"version": "1.0.0"
-		}
-	}
+        "1155": {
+            "Policy_ID": {
+                "nft0": {
+                    "name": "NFT 0",
+                    "payload": "URI-of-file",
+                    "hash": "sha256-hash-of-file"
+                },
+                ...
+            },
+            ...
+            "version": "1.0.0"
+        }
+    }
 ```
 
 The "1155" is a CBOR data key and referes to the ERC-1155 standard NFT token specification.  It is a constant string.
@@ -131,18 +128,31 @@ in the next section.
 
 
 
-TODO TODO TODO TODO TODO TODO TODO TODO 
+
+### Token retrieval
     
 Retrieve valid metadata for a specific token
-As mentioned above this metadata structure allows to have either one token or multiple tokens with also different policies in a single mint transaction. A third party tool can then fetch the token metadata seamlessly. It doesn't matter if the metadata includes just one token or multiple. The proceedure for the third party is always the same:
 
-Find the latest mint transaction with the label 721 in the metadata of the specific token
-Lookup the 721 key
-Lookup the Policy Id of the token
-Lookup the Asset name of the token
-You end up with the correct metadata for the token
-Update metadata link for a specific token
-Using the latest mint transaction with the label 721 as valid metadata for a token allows to update the metadata link of this token. As soon as a new mint transaction is occurring including metadata with the label 721, the metadata link is considered updated and the new metadata should be used. This is only possible if the policy allows to mint or burn the same token again.
+As mentioned above this metadata structure allows to have either
+one token or multiple tokens with also different policies in a
+single mint transaction. A third party tool can then fetch the token
+metadata seamlessly. It doesn't matter if the metadata includes
+just one token or multiple. The procedure for the third party is
+always the same:
+
+Find the latest mint transaction with the label 1155 in the metadata
+of the specific token
+
+Lookup the Policy Id of the token.
+
+Lookup the name of the token and the payload.
+
+This allows you to determine the contents and associated data for
+the token.
+
+
+
+
 
 ## File Structure
 
@@ -152,32 +162,67 @@ an index.json added that describes the attributes of this NFT.
 The file contains a JSON file, `index.json`.
 
 ```
-	{
-		"Name": "NFT 0",
-		"FilesHash": "sha256-hash-of-concatenated-file-Hash",
-		"Title": "",
-		"Description": "",
-		"Creator": "",
-		"CreationTimestamp": "",
-		"Location": {
-			{ "latitude": 42.43,, "longitude": -109.31 }
-		},
-		"RepFile": 0,
-		"AdditionalData": {
-			"name": "value",
-			"name1": "value1"
-		},
-		"Files": [
-			{
-				"MimeType":
-				"OrigialFileName":
-				"FileDescription":
-				"FileName":
-				"Hash": "sha256-hash-of-file"
-			}
-		]
-	}
+    {
+        "Name": "NFT 0",
+        "FilesHash": "sha256-hash-of-concatenated-file-Hash",
+        "Title": "The Title of this NFT",
+        "Description": "What is this NFT",
+        "Creator": "John Q Person",
+        "CreationTimestamp": "TODO",
+        "License": "CC-BY-SA-4.0",
+        "Location": {
+            { "latitude": 42.43,, "longitude": -109.31 }
+        },
+        "RepFile": 0,
+        "AdditionalData": "{\"some\":\"data\"}",
+        "Files": [
+            {
+                "MimeType": "TODO",
+                "OrigialFileName": "TODO",
+                "FileDescription": "TODO",
+                "FileName": "TODO",
+                "Hash": "sha256-hash-of-file"
+            }
+        ]
+    }
 ```
+
+"Name" is the required name of the NFT and must mach with the "name" field in the NFT metadata.
+
+"FileHash" required value, is the sha256 hash of each of the "Hash" fields in the "Files" array concatenated in order.
+It functions in a similar fusion to a Merkel Hash.  The characters in the has must be in [0-9a-f].
+
+"Title" is a required text title for this NFT.
+
+"Description" is a required text description of what this file is as a part of the digital assets of the NFT.
+
+"Creator" is a person or entity or set of entities that created this NFT.
+
+"CreationTimestamp" is the RFC3339 formatted date when this NFT was created.
+
+"Location" is the geographical location of the NFT if applicable.
+
+"RepFile" is an index to one of the items in the "Files" array that is representative of the NFT.   This may
+be an icon or a reduced size image that is used to display the NFT.
+
+"License": is an optional text field that describes the license of this NFT.
+
+"AdditionalData" is an optional string with user defined data.
+
+"Files" is an array of objects.  The array must contain at least 1 object.    The array is order dependent
+and must match with the order that the "Hash" field in each object is conatenated to produce the "FilesHash".
+Each object contains:
+
+"MimeType" the mime type for the file.
+
+"OrigialFileName" the name of the file before it was added to this .zip archive.
+
+"FileDescription" the description of this file in the set.  For example "sheet music".
+
+"FileName" the name of this file in the .zip archive.
+
+"Hash" the sha256 bit hash as a hexidecimal string with characters from [0-9a-f] of the contents of the file.
+
 
 ## Backward Compatibility
 
@@ -199,11 +244,49 @@ To keep NFT metadata compatible with changes coming up in the future, we use the
 
 ### Example Transaction creation of NFT
 
-TODO
+An example transaction
+
+```
+#!/bin/bash
+
+curl --request POST \
+  --url http://localhost:1337/v2/wallets/5076b34c6949dbd150eb9c39039037543946bdce/transactions \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "passphrase": "password123",
+    "payments": [
+        {
+            "address": "addr_test1qpg2eglv9gf2rksvdj53t6ajfgzkycaadlt2fatjyn4etpze0592agqpwraqajx2dsu2sxj64uese5s4qum293wuc00q6hnhqq",
+            "amount": {
+                "quantity": 1000000,
+                "unit": "lovelace"
+            }
+        }
+    ],
+    "metadata": {
+		"1155": {
+			"cbc34df5cb851e6fe5035a438d534ffffc87af012f3ff2d4db94288b": {
+				"nft0": {
+					"name": "NFT 0",
+					"uri": "https://ipfs.io/ipfs/QmUrNv5yofTVJcCZS0Wa7YBd4ppzvpLDx9a6iVwp3Tp29b/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip",
+					"hash": "d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597" 
+				},
+				"nft1": {
+					"name": "NFT 1",
+					"uri": "http://nft-metadata-storeage.s3.amazonaws.com/2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d.zip", 
+					"hash": "2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d"
+				}
+			}
+		}
+    }
+}'
+
+
+```
 
 ### JSON Schema for Validation of index.json
 
-The followin is the JSON Schema for validation of the index.json file in the .zip archives.
+The following is the JSON Schema for validation of the `index.json` file in the .zip archives.
 
 ```
 {
@@ -236,6 +319,10 @@ The followin is the JSON Schema for validation of the index.json file in the .zi
     "CreationTimestamp": {
       "type": "string",
       "description": "A timestamp in RFC3339 format for when this asset was created."
+    },
+    "License": {
+      "type": "string",
+      "description": "A description of how this item is licensed."
     },
     "AdditionalData": {
       "type": "string",
@@ -302,7 +389,34 @@ The followin is the JSON Schema for validation of the index.json file in the .zi
 
 ### Usage Examples
 
-TODO
+An example of an `index.json` file:
+
+```
+{
+	"Name": "NFT 0",
+	"FilesHash": "sha256-hash-of-concatenated-file-Hash",
+	"Title": "The Title of this NFT",
+	"Description": "What is this NFT",
+	"Creator": "John Q Person",
+	"CreationTimestamp": "TODO",
+	"License": "CC-BY-SA-4.0",
+	"Location": {
+		{ "latitude": 42.43,, "longitude": -109.31 }
+	},
+	"RepFile": 0,
+	"AdditionalData": "{\"some\":\"data\"}",
+	"Files": [
+		{
+			"MimeType": "TODO",
+			"OrigialFileName": "TODO",
+			"FileDescription": "TODO",
+			"FileName": "TODO",
+			"Hash": "sha256-hash-of-file"
+		}
+	]
+}
+
+```
 
 ## Copyright
 

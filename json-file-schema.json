@@ -29,6 +29,10 @@
       "type": "string",
       "description": "A timestamp in RFC3339 format for when this asset was created."
     },
+    "License": {
+      "type": "string",
+      "description": "A description of how this item is licensed."
+    },
     "AdditionalData": {
       "type": "string",
       "description": "A set of user specified data for this token."
