@@ -8,3 +8,7 @@ schema_run:
 	check-json-syntax json-file-schema.json
 	check-json-syntax index.json
 	CheckJSONSchema -s json-file-schema.json -d index.json
+
+meta_run:
+	check-json-syntax json-file-schema.json
+	check-json-syntax index.json

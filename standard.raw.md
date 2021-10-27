@@ -108,7 +108,30 @@ This data must comply with the CBOR data representation used in Cardano.
     }
 ```
 
-The "1155" is a CBOR data key and referes to the ERC-1155 standard NFT token specification.  It is a constant string.
+```
+	"metadata": {
+		"1155": {
+			"<Policy_ID>": {
+				"<nft0>": {
+					"name": "<required example:TOKEN0>",
+					"hash": "<requried desc:sha256-hash-of-file>"
+					"description": "<optional>",
+					"sample_image": "<optional>",
+					"location": {
+						"url": "<required>",
+						"ipfs": "<optional>",
+						"arweave": "<optional>"
+					}
+				},
+				...
+			},
+			...
+			"version": "1.0.0"
+		}
+	}
+```
+
+The "1155" is a CBOR data key and referees to the ERC-1155 standard NFT token specification.  It is a constant string.
 
 The "Policy_ID" is the rules for minting and burning of this kind of token.
 
@@ -116,12 +139,12 @@ The "Policy_ID" is the rules for minting and burning of this kind of token.
 
 "name" is a unique name that more fully describe the NFT.
 
-"payload" is the URI of a place to get the off-chain storage for the token.   The format of the off chain storage is specified
+"location" is the URI or URL  of a place to get the off-chain storage for the token.   The format of the off chain storage is specified
 in the next section.
 
-"hash" is the sha256 hash of the off chain storage.   It is commonly used as part of the URI to uniquely identify the stored data.
+"hash" is the sha256 hash of the off chain storage.  
 
-"version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version".
+"version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version".  Policy_ID can not be "version".
 
 
 
