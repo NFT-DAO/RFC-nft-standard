@@ -26,7 +26,7 @@
 
 Prof Philip Schlump, Assistant Director, University of Wyoming Center for Blockchain and Digital Innovation, email:pschlump@uwyo.edu
 
-Andrew Andrew Thornhill, TODO-your-title, email:andrew@itconsult.ge
+Andrew Thornhill, TODO-your-title, email:andrew@itconsult.ge
 
 
 ## Support
@@ -46,15 +46,15 @@ digital assets associated with the NFT.
 ### Motivation
 
 Tokens on Cardano are a part of the ledger. Unlike on Ethereum,
-where metadata can be attached to a token through a smart contract,
-this isn't possible on Cardano because tokens are native and Cardano
+where metadata can be attached to a token through a smart contract.
+This isn't possible on Cardano because tokens are native and Cardano
 uses a UTxO ledger, which makes it hard to directly attach metadata
 to a token. So the link to the metadata needs to be established
 differently.  By using Cardano's ability to send metadata as a part of a transaction,
 the necessary linkage between a transaction and the NFT's metadata can be
 established.
 
-Given a token in a EUTXOma ledger, we can ask “where did this token
+Given a token in an EUTXOma ledger, we can ask “Where did this token
 come from?” Since tokens are always created in specific forging
 operations, we can always trace them back through their transaction
 graph to their origin.
@@ -66,18 +66,18 @@ graph to their origin.
 
 ### Considerations
 
-That being said, we have unique metadata link to a token and can
+That being said, we have a unique metadata link to a token and can
 always prove that with 100% certainty. No one else can manipulate
 the link except if the policy allows it to (update mechanism).
 
 Since the cost of the transaction is determined by the size of the
-transaction the amount of data stored on chain is minimized.
+transaction, the amount of data stored on the chain is minimized.
 
-Also digital assists are not assumed to be single files or a
+Also digital assettes are not assumed to be single files or a
 small set of data or a single image.  NFTs have a clear application
-in tying real world data to on chain tokens.  For example the use of
+in tying real world data to on chain tokens.  For example, the use of
 NFTs in tracking weld certifications for bridges would combine
-engendering specifications with video of the weld and x-ray images.
+engendering specifications with a video of the weld and x-ray images.
 Another example of a NFT would be piano concerto with a `.mp3` file containing
 the music and the sheet music as a `.pdf`.
 
@@ -145,7 +145,7 @@ in the next section.
 
 "hash" is the sha256 hash of the off chain storage.  
 
-"version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version".  Policy_ID can not be "version".
+"version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version."  Policy_ID can not be "version."
 
 
 
@@ -156,11 +156,11 @@ in the next section.
     
 Retrieve valid metadata for a specific token
 
-As mentioned above this metadata structure allows to have either
-one token or multiple tokens with also different policies in a
+As mentioned above, this metadata structure allows to have either
+one token, or multiple tokens, with different policies in a
 single mint transaction. A third party tool can then fetch the token
 metadata seamlessly. It doesn't matter if the metadata includes
-just one token or multiple. The procedure for the third party is
+just one token or multiple tokens. The procedure for the third party is
 always the same:
 
 Find the latest mint transaction with the label 1155 in the metadata
@@ -212,8 +212,8 @@ The file contains a JSON file, `index.json`.
 
 "Name" is the required name of the NFT and must mach with the "name" field in the NFT metadata.
 
-"FileHash" required value, is the sha256 hash of each of the "Hash" fields in the "Files" array concatenated in order.
-It functions in a similar fusion to a Merkel Hash.  The characters in the has must be in [0-9a-f].
+"FileHash", a required value, is the sha256 hash of each of the "Hash" fields in the "Files" array concatenated in order.
+It functions in a similar fusion to a Merkel Hash.  The characters in the hash must be in [0-9a-fA-F].
 
 "Title" is a required text title for this NFT.
 
@@ -233,14 +233,14 @@ be an icon or a reduced size image that is used to display the NFT.
 "AdditionalData" is an optional string with user defined data.
 
 "Files" is an array of objects.  The array must contain at least 1 object.    The array is order dependent
-and must match with the order that the "Hash" field in each object is conatenated to produce the "FilesHash".
+and must match with the order that the "Hash" field in each object is conatenated to produce the "FilesHash."
 Each object contains:
 
 "MimeType" the mime type for the file.
 
 "OrigialFileName" the name of the file before it was added to this .zip archive.
 
-"FileDescription" the description of this file in the set.  For example "sheet music".
+"FileDescription" the description of this file in the set.  For example "sheet music."
 
 "FileName" the name of this file in the .zip archive.
 
