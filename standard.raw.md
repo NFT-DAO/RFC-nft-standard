@@ -91,22 +91,6 @@ the music and the sheet music as a `.pdf`.
 The structure allows for multiple token mints, also with different policies, in a single transaction.
 This data must comply with the CBOR data representation used in Cardano.
 
-```
-    "metadata": {
-        "1155": {
-            "Policy_ID": {
-                "nft0": {
-                    "name": "NFT 0",
-                    "payload": "URI-of-file",
-                    "hash": "sha256-hash-of-file"
-                },
-                ...
-            },
-            ...
-            "version": "1.0.0"
-        }
-    }
-```
 
 ```
 	"metadata": {
@@ -133,16 +117,18 @@ This data must comply with the CBOR data representation used in Cardano.
 
 The "1155" is a CBOR data key and referees to the ERC-1155 standard NFT token specification.  It is a constant string.
 
-The "Policy_ID" is the rules for minting and burning of this kind of token.
+The "&lt;Policy_ID&gt;" is the rules for minting and burning of this kind of token.
 
-"nft0" is a unique name within this set of tokens describing the minted item.
+"&lt;nft0&gt;" is a unique name within this set of tokens describing the minted item.
 
 "name" is a unique name that more fully describe the NFT.
 
-"location" is the URI or URL  of a place to get the off-chain storage for the token.   The format of the off chain storage is specified
+"location" is the URI or URL  of a location to get the off-chain storage for the token.   The format of the off chain storage is specified
 in the next section.
 
 "hash" is the sha256 hash of the off chain storage.  
+
+"sample_image" is an appropriate sample image ULR for a representative image for this NFT.
 
 "version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version."  Policy_ID can not be "version."
 

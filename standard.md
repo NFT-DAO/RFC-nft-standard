@@ -92,22 +92,6 @@ the music and the sheet music as a `.pdf`.
 The structure allows for multiple token mints, also with different policies, in a single transaction.
 This data must comply with the CBOR data representation used in Cardano.
 
-```
-    "metadata": {
-        "1155": {
-            "Policy_ID": {
-                "nft0": {
-                    "name": "NFT 0",
-                    "payload": "URI-of-file",
-                    "hash": "sha256-hash-of-file"
-                },
-                ...
-            },
-            ...
-            "version": "1.0.0"
-        }
-    }
-```
 
 ```
 	"metadata": {
@@ -134,16 +118,18 @@ This data must comply with the CBOR data representation used in Cardano.
 
 The "1155" is a CBOR data key and referees to the ERC-1155 standard NFT token specification.  It is a constant string.
 
-The "Policy_ID" is the rules for minting and burning of this kind of token.
+The "&lt;Policy_ID&gt;" is the rules for minting and burning of this kind of token.
 
-"nft0" is a unique name within this set of tokens describing the minted item.
+"&lt;nft0&gt;" is a unique name within this set of tokens describing the minted item.
 
 "name" is a unique name that more fully describe the NFT.
 
-"location" is the URI or URL  of a place to get the off-chain storage for the token.   The format of the off chain storage is specified
+"location" is the URI or URL  of a location to get the off-chain storage for the token.   The format of the off chain storage is specified
 in the next section.
 
 "hash" is the sha256 hash of the off chain storage.  
+
+"sample_image" is an appropriate sample image ULR for a representative image for this NFT.
 
 "version" is a version number for this set of tokens and is a reserved constant.  Tokens can not be named "version."  Policy_ID can not be "version."
 
@@ -291,12 +277,16 @@ curl --request POST \
 			"cbc34df5cb851e6fe5035a438d534ffffc87af012f3ff2d4db94288b": {
 				"nft0": {
 					"name": "NFT 0",
-					"uri": "https://ipfs.io/ipfs/QmUrNv5yofTVJcCZS0Wa7YBd4ppzvpLDx9a6iVwp3Tp29b/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip",
+					"location":{
+						"url": "https://ipfs.io/ipfs/QmUrNv5yofTVJcCZS0Wa7YBd4ppzvpLDx9a6iVwp3Tp29b/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip"
+					},
 					"hash": "d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597" 
 				},
 				"nft1": {
 					"name": "NFT 1",
-					"uri": "http://nft-metadata-storeage.s3.amazonaws.com/2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d.zip", 
+					"location":{
+						"url": "http://nft-metadata-storeage.s3.amazonaws.com/2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d.zip", 
+					},
 					"hash": "2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d"
 				}
 			}

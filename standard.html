@@ -1,0 +1,1124 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
+
+<div class="markdown-body">
+
+<h1>CIP 25 - NFT Metadata Standard</h1>
+
+<h2>Contents</h2>
+
+<ol>
+<li>Authors</li>
+<li>Support</li>
+<li>Abstract</li>
+<li>Motivation</li>
+<li>Considerations</li>
+<li>Specification</li>
+<li>On Chain Structure</li>
+<li>File Structure</li>
+<li>Retrieve valid metadata for a specific token</li>
+<li>Update metadata link for a specific token</li>
+<li>Backward Compatibility</li>
+<li>References</li>
+<li>Appendix</li>
+<li>Example Transaction creation of NFT</li>
+<li>JSON Schema for Validation of index.json</li>
+<li>Usage Examples</li>
+<li>Copyright</li>
+</ol>
+
+<h2>Authors</h2>
+
+<p>Prof Philip Schlump, Assistant Director, University of Wyoming Center for Blockchain and Digital Innovation, email:pschlump@uwyo.edu</p>
+
+<p>Andrew Thornhill, TODO-your-title, email:andrew@itconsult.ge</p>
+
+<h2>Support</h2>
+
+<p>Work on this standard is supported by NFT-DAO, LLC and funds from the Cardano Catalyst Fund.</p>
+
+<h2>Abstract</h2>
+
+<p>This proposal defines a NFT Metadata Standard for Native Tokens on
+the Cardano chain and the file format for storage of off-chain
+digital assets associated with the NFT.</p>
+
+<h3>Motivation</h3>
+
+<p>Tokens on Cardano are a part of the ledger. Unlike on Ethereum,
+where metadata can be attached to a token through a smart contract.
+This isn&rsquo;t possible on Cardano because tokens are native and Cardano
+uses a UTxO ledger, which makes it hard to directly attach metadata
+to a token. So the link to the metadata needs to be established
+differently.  By using Cardano&rsquo;s ability to send metadata as a part of a transaction,
+the necessary linkage between a transaction and the NFT&rsquo;s metadata can be
+established.</p>
+
+<p>Given a token in an EUTXOma ledger, we can ask “Where did this token
+come from?” Since tokens are always created in specific forging
+operations, we can always trace them back through their transaction
+graph to their origin.</p>
+
+<p>(Section 4.1 in the paper: <a href="https://hydra.iohk.io/build/5400786/download/1/eutxoma.pdf">https://hydra.iohk.io/build/5400786/download/1/eutxoma.pdf</a>)</p>
+
+<h3>Considerations</h3>
+
+<p>That being said, we have a unique metadata link to a token and can
+always prove that with 100% certainty. No one else can manipulate
+the link except if the policy allows it to (update mechanism).</p>
+
+<p>Since the cost of the transaction is determined by the size of the
+transaction, the amount of data stored on the chain is minimized.</p>
+
+<p>Also digital assettes are not assumed to be single files or a
+small set of data or a single image.  NFTs have a clear application
+in tying real world data to on chain tokens.  For example, the use of
+NFTs in tracking weld certifications for bridges would combine
+engendering specifications with a video of the weld and x-ray images.
+Another example of a NFT would be piano concerto with a <code>.mp3</code> file containing
+the music and the sheet music as a <code>.pdf</code>.</p>
+
+<h2>Specification</h2>
+
+<p>721    NFT or 1155 NFT Metadata included in this transaction.</p>
+
+<h2>On Chain Structure</h2>
+
+<p>The structure allows for multiple token mints, also with different policies, in a single transaction.
+This data must comply with the CBOR data representation used in Cardano.</p>
+
+<pre><code>	&quot;metadata&quot;: {
+		&quot;1155&quot;: {
+			&quot;&lt;Policy_ID&gt;&quot;: {
+				&quot;&lt;nft0&gt;&quot;: {
+					&quot;name&quot;: &quot;&lt;required example:TOKEN0&gt;&quot;,
+					&quot;hash&quot;: &quot;&lt;requried desc:sha256-hash-of-file&gt;&quot;
+					&quot;description&quot;: &quot;&lt;optional&gt;&quot;,
+					&quot;sample_image&quot;: &quot;&lt;optional&gt;&quot;,
+					&quot;location&quot;: {
+						&quot;url&quot;: &quot;&lt;required&gt;&quot;,
+						&quot;ipfs&quot;: &quot;&lt;optional&gt;&quot;,
+						&quot;arweave&quot;: &quot;&lt;optional&gt;&quot;
+					}
+				},
+				...
+			},
+			...
+			&quot;version&quot;: &quot;1.0.0&quot;
+		}
+	}
+</code></pre>
+
+<p>The &ldquo;1155&rdquo; is a CBOR data key and referees to the ERC-1155 standard NFT token specification.  It is a constant string.</p>
+
+<p>The &ldquo;&lt;Policy_ID&gt;&rdquo; is the rules for minting and burning of this kind of token.</p>
+
+<p>&ldquo;&lt;nft0&gt;&rdquo; is a unique name within this set of tokens describing the minted item.</p>
+
+<p>&ldquo;name&rdquo; is a unique name that more fully describe the NFT.</p>
+
+<p>&ldquo;location&rdquo; is the URI or URL  of a location to get the off-chain storage for the token.   The format of the off chain storage is specified
+in the next section.</p>
+
+<p>&ldquo;hash&rdquo; is the sha256 hash of the off chain storage.</p>
+
+<p>&ldquo;sample_image&rdquo; is an appropriate sample image ULR for a representative image for this NFT.</p>
+
+<p>&ldquo;version&rdquo; is a version number for this set of tokens and is a reserved constant.  Tokens can not be named &ldquo;version.&rdquo;  Policy_ID can not be &ldquo;version.&rdquo;</p>
+
+<h3>Token retrieval</h3>
+
+<p>Retrieve valid metadata for a specific token</p>
+
+<p>As mentioned above, this metadata structure allows to have either
+one token, or multiple tokens, with different policies in a
+single mint transaction. A third party tool can then fetch the token
+metadata seamlessly. It doesn&rsquo;t matter if the metadata includes
+just one token or multiple tokens. The procedure for the third party is
+always the same:</p>
+
+<p>Find the latest mint transaction with the label 1155 in the metadata
+of the specific token</p>
+
+<p>Lookup the Policy Id of the token.</p>
+
+<p>Lookup the name of the token and the payload.</p>
+
+<p>This allows you to determine the contents and associated data for
+the token.</p>
+
+<h2>File Structure</h2>
+
+<p>The set of files comprising the digital asset for the NFT is combined into a single .zip file with
+an index.json added that describes the attributes of this NFT.</p>
+
+<p>The file contains a JSON file, <code>index.json</code>.</p>
+
+<pre><code>    {
+        &quot;Name&quot;: &quot;NFT 0&quot;,
+        &quot;FilesHash&quot;: &quot;sha256-hash-of-concatenated-file-Hash&quot;,
+        &quot;Title&quot;: &quot;The Title of this NFT&quot;,
+        &quot;Description&quot;: &quot;What is this NFT&quot;,
+        &quot;Creator&quot;: &quot;John Q Person&quot;,
+        &quot;CreationTimestamp&quot;: &quot;2010-12-31T15:59:00-07:00&quot;,
+        &quot;License&quot;: &quot;CC-BY-SA-4.0&quot;,
+        &quot;Location&quot;: {
+            { &quot;latitude&quot;: 42.43,, &quot;longitude&quot;: -109.31 }
+        },
+        &quot;RepFile&quot;: 0,
+        &quot;AdditionalData&quot;: &quot;{\&quot;some\&quot;:\&quot;data\&quot;}&quot;,
+        &quot;Files&quot;: [
+            {
+                &quot;MimeType&quot;: &quot;mime type from rfc6838&quot;,
+                &quot;OrigialFileName&quot;: &quot;an-original-file-name.mp3&quot;,
+                &quot;FileDescription&quot;: &quot;Description of this file in set&quot;,
+                &quot;FileName&quot;: &quot;file-in-set.mp3&quot; ,
+                &quot;Hash&quot;: &quot;sha256-hash-of-file&quot;
+            }
+        ]
+    }
+</code></pre>
+
+<p>&ldquo;Name&rdquo; is the required name of the NFT and must mach with the &ldquo;name&rdquo; field in the NFT metadata.</p>
+
+<p>&ldquo;FileHash&rdquo;, a required value, is the sha256 hash of each of the &ldquo;Hash&rdquo; fields in the &ldquo;Files&rdquo; array concatenated in order.
+It functions in a similar fusion to a Merkel Hash.  The characters in the hash must be in [0-9a-fA-F].</p>
+
+<p>&ldquo;Title&rdquo; is a required text title for this NFT.</p>
+
+<p>&ldquo;Description&rdquo; is a required text description of what this file is as a part of the digital assets of the NFT.</p>
+
+<p>&ldquo;Creator&rdquo; is a person or entity or set of entities that created this NFT.</p>
+
+<p>&ldquo;CreationTimestamp&rdquo; is the RFC3339 formatted date when this NFT was created.</p>
+
+<p>&ldquo;Location&rdquo; is the geographical location of the NFT if applicable.</p>
+
+<p>&ldquo;RepFile&rdquo; is an index to one of the items in the &ldquo;Files&rdquo; array that is representative of the NFT.   This may
+be an icon or a reduced size image that is used to display the NFT.</p>
+
+<p>&ldquo;License&rdquo;: is an optional text field that describes the license of this NFT.</p>
+
+<p>&ldquo;AdditionalData&rdquo; is an optional string with user defined data.</p>
+
+<p>&ldquo;Files&rdquo; is an array of objects.  The array must contain at least 1 object.    The array is order dependent
+and must match with the order that the &ldquo;Hash&rdquo; field in each object is conatenated to produce the &ldquo;FilesHash.&rdquo;
+Each object contains:</p>
+
+<p>&ldquo;MimeType&rdquo; the mime type for the file.</p>
+
+<p>&ldquo;OrigialFileName&rdquo; the name of the file before it was added to this .zip archive.</p>
+
+<p>&ldquo;FileDescription&rdquo; the description of this file in the set.  For example &ldquo;sheet music.&rdquo;</p>
+
+<p>&ldquo;FileName&rdquo; the name of this file in the .zip archive.</p>
+
+<p>&ldquo;Hash&rdquo; the sha256 bit hash as a hexidecimal string with characters from [0-9a-f] of the contents of the file.</p>
+
+<h2>Backward Compatibility</h2>
+
+<p>To keep NFT metadata compatible with changes coming up in the future, we use the version property. Version 1.0.0 is used in the current metadata structure of this CIP.</p>
+
+<h2>References</h2>
+
+<ul>
+<li>Mime type: <a href="https://tools.ietf.org/html/rfc6838">https://tools.ietf.org/html/rfc6838</a>.</li>
+<li>JSON file Standard: <a href="https://www.reddit.com/r/CardanoDevelopers/comments/mkhlv8/nft_metadata_standard/">https://www.reddit.com/r/CardanoDevelopers/comments/mkhlv8/nft_metadata_standard/</a></li>
+<li>CIP about reserved labels: <a href="https://github.com/cardano-foundation/CIPs/blob/master/CIP-0010/CIP-0010.md">https://github.com/cardano-foundation/CIPs/blob/master/CIP-0010/CIP-0010.md</a></li>
+<li>EIP-721: <a href="https://eips.ethereum.org/EIPS/eip-721">https://eips.ethereum.org/EIPS/eip-721</a></li>
+<li>URI: <a href="https://tools.ietf.org/html/rfc3986">https://tools.ietf.org/html/rfc3986</a>, <a href="https://tools.ietf.org/html/rfc2397">https://tools.ietf.org/html/rfc2397</a></li>
+<li>ERC-1155 Standard: <a href="https://eips.ethereum.org/EIPS/eip-1155">https://eips.ethereum.org/EIPS/eip-1155</a></li>
+<li>CBOR data Standard: <a href="https://datatracker.ietf.org/doc/html/rfc8610">https://datatracker.ietf.org/doc/html/rfc8610</a></li>
+<li>JSON Schema: <a href="https://json-schema.org/draft/2020-12/schema">https://json-schema.org/draft/2020-12/schema</a></li>
+<li>Timestamp Format: <a href="https://datatracker.ietf.org/doc/html/rfc3339">https://datatracker.ietf.org/doc/html/rfc3339</a></li>
+</ul>
+
+<h2>Appendix</h2>
+
+<h3>Example Transaction creation of NFT</h3>
+
+<p>An example transaction</p>
+
+<pre><code>#!/bin/bash
+
+curl --request POST \
+  --url http://localhost:1337/v2/wallets/5076b34c6949dbd150eb9c39039037543946bdce/transactions \
+  --header 'Content-Type: application/json' \
+  --data '{
+    &quot;passphrase&quot;: &quot;password123&quot;,
+    &quot;payments&quot;: [
+        {
+            &quot;address&quot;: &quot;addr_test1qpg2eglv9gf2rksvdj53t6ajfgzkycaadlt2fatjyn4etpze0592agqpwraqajx2dsu2sxj64uese5s4qum293wuc00q6hnhqq&quot;,
+            &quot;amount&quot;: {
+                &quot;quantity&quot;: 1000000,
+                &quot;unit&quot;: &quot;lovelace&quot;
+            }
+        }
+    ],
+    &quot;metadata&quot;: {
+		&quot;1155&quot;: {
+			&quot;cbc34df5cb851e6fe5035a438d534ffffc87af012f3ff2d4db94288b&quot;: {
+				&quot;nft0&quot;: {
+					&quot;name&quot;: &quot;NFT 0&quot;,
+					&quot;location&quot;:{
+						&quot;url&quot;: &quot;https://ipfs.io/ipfs/QmUrNv5yofTVJcCZS0Wa7YBd4ppzvpLDx9a6iVwp3Tp29b/d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597.zip&quot;
+					},
+					&quot;hash&quot;: &quot;d3b71a414945ff13ee4e2b21697ab6ff9a4ff140d63dcdb7b914d46e300d6597&quot; 
+				},
+				&quot;nft1&quot;: {
+					&quot;name&quot;: &quot;NFT 1&quot;,
+					&quot;location&quot;:{
+						&quot;url&quot;: &quot;http://nft-metadata-storeage.s3.amazonaws.com/2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d.zip&quot;, 
+					},
+					&quot;hash&quot;: &quot;2db31c4b604cac43817e19f174a6d3fa1c12a4c9df5e9b82dbedf63df14f355d&quot;
+				}
+			}
+		}
+    }
+}'
+
+
+</code></pre>
+
+<h3>JSON Schema for Validation of index.json</h3>
+
+<p>The following is the JSON Schema for validation of the <code>index.json</code> file in the .zip archives.</p>
+
+<pre><code>{
+  &quot;$id&quot;: &quot;https://example.com/cip25nftstandardfiledata.schema.json&quot;,
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;CIP-25 NFT Standard File Data&quot;,
+  &quot;required&quot;: [ &quot;Name&quot;, &quot;FileHash&quot;, &quot;Title&quot;, &quot;Description&quot;, &quot;RepFile&quot;, &quot;Files&quot; ],
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;Name&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;The uqique name of this NFT.&quot;
+    },
+    &quot;FileHash&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;The sha256 hash of the concatenated hashes of files in the Files array.&quot;
+    },
+    &quot;Title&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;The title of this NFT.&quot;
+    },
+    &quot;Description&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;A description of what this NFT is.&quot;
+    },
+    &quot;Creator&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;A name or set of names of who created this digital asset.&quot;
+    },
+    &quot;CreationTimestamp&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;A timestamp in RFC3339 format for when this asset was created.&quot;
+    },
+    &quot;License&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;A description of how this item is licensed.&quot;
+    },
+    &quot;AdditionalData&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;A set of user specified data for this token.&quot;
+    },
+	&quot;Location&quot;: {
+		&quot;required&quot;: [ &quot;latitude&quot;, &quot;longitude&quot; ],
+		&quot;type&quot;: &quot;object&quot;,
+	  	&quot;properties&quot;: {
+    		&quot;latitude&quot;: {
+      		&quot;type&quot;: &quot;number&quot;,
+      		&quot;minimum&quot;: -90,
+      		&quot;maximum&quot;: 90
+    	},
+    	&quot;longitude&quot;: {
+      		&quot;type&quot;: &quot;number&quot;,
+      		&quot;minimum&quot;: -180,
+      		&quot;maximum&quot;: 180
+    	}
+	  }
+	},
+    &quot;RepFile&quot;: {
+      &quot;description&quot;: &quot;The position in the Files array of a representative image for this NFT&quot;,
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0
+    },
+	&quot;Files&quot;: {
+		&quot;type&quot;: &quot;array&quot;,
+      	&quot;description&quot;: &quot;A non-empty list of files for the NFT token.&quot;,
+		&quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/files&quot; }
+	}
+  },
+
+  &quot;$defs&quot;: {
+    &quot;files&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [ &quot;MimeType&quot;, &quot;OriginalFileName&quot;, &quot;FileDescription&quot;, &quot;FileName&quot;, &quot;Hash&quot; ],
+      &quot;properties&quot;: {
+			&quot;MimeType&quot;: {
+			  &quot;type&quot;: &quot;string&quot;,
+			  &quot;description&quot;: &quot;The mime type of the file in the set.&quot;
+			},
+			&quot;OriginalFileName&quot;: {
+			  &quot;type&quot;: &quot;string&quot;,
+			  &quot;description&quot;: &quot;The name that the file was originally stored as - before placement in thie set.&quot;
+			},
+			&quot;FileDescription&quot;: {
+			  &quot;type&quot;: &quot;string&quot;,
+			  &quot;description&quot;: &quot;A description for this file.&quot;
+			},
+			&quot;FileName&quot;: {
+			  &quot;type&quot;: &quot;string&quot;,
+			  &quot;description&quot;: &quot;The name of this file in the set.&quot;
+			},
+			&quot;Hash&quot;: {
+			  &quot;type&quot;: &quot;string&quot;,
+			  &quot;description&quot;: &quot;The sha256 hash of the file's data in the set.&quot;
+			}
+	  }
+	}
+  }
+}
+
+</code></pre>
+
+<h3>Usage Examples</h3>
+
+<p>An example of an <code>index.json</code> file:</p>
+
+<pre><code>{
+	&quot;Name&quot;: &quot;NFT 0&quot;,
+	&quot;FileHash&quot;: &quot;sha256-hash-of-concatenated-file-Hash&quot;,
+	&quot;Title&quot;: &quot;The Title of this NFT&quot;,
+	&quot;Description&quot;: &quot;What is this NFT&quot;,
+	&quot;Creator&quot;: &quot;John Q Person&quot;,
+	&quot;CreationTimestamp&quot;: &quot;TODO&quot;,
+	&quot;License&quot;: &quot;CC-BY-SA-4.0&quot;,
+	&quot;Location&quot;: { &quot;latitude&quot;: 42.43, &quot;longitude&quot;: -109.31 } ,
+	&quot;RepFile&quot;: 0,
+	&quot;AdditionalData&quot;: &quot;{\&quot;some\&quot;:\&quot;data\&quot;}&quot;,
+	&quot;Files&quot;: [
+		{
+			&quot;MimeType&quot;: &quot;TODO&quot;,
+			&quot;OriginalFileName&quot;: &quot;TODO&quot;,
+			&quot;FileDescription&quot;: &quot;TODO&quot;,
+			&quot;FileName&quot;: &quot;TODO&quot;,
+			&quot;Hash&quot;: &quot;sha256-hash-of-file&quot;
+		}
+	]
+}
+
+</code></pre>
+
+<h2>Copyright</h2>
+
+<p>This CIP is licensed under CC-BY-4.0.</p>
+
+</div>
+
